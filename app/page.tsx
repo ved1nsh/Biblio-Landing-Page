@@ -1,65 +1,75 @@
 import Image from "next/image";
+import Navbar from "./components/Navbar";
+import PageTwoSection from "./sections/FeaturesSection";
+import ResearchPage from "./sections/ResearchSection";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div
+      className="min-h-screen w-full"
+      style={{ backgroundColor: "#EDEAE4", fontFamily: "var(--font-neue-montreal)" }}
+    >
+      <section className="w-full overflow-hidden bg-[#EDEAE4] px-6 pt-24 pb-8 md:px-10 md:pt-28 md:pb-12">
+        <Navbar />
+
+        <div className="mx-auto flex w-full max-w-[1280px] flex-col items-center text-center md:flex-row md:items-center md:justify-between md:text-left">
+          <div className="md:w-[44%] md:max-w-[520px]">
+            <h1
+              className="max-w-[360px] text-[40px] font-normal leading-[0.98] tracking-tight text-zinc-900 md:max-w-none md:text-[76px]"
+              style={{ fontFamily: "var(--font-stack-sans)" }}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+              Introducing, Biblio.
+            </h1>
+
+            <p className="mt-4 max-w-[340px] text-[16px] leading-[1.35] text-zinc-700 md:mt-6 md:max-w-[560px] md:text-[26px]">
+              Your one stop application for all your digital reading needs
+            </p>
+
+            <div className="mt-6 flex flex-row items-center justify-center gap-4 md:mt-8 md:justify-start md:gap-5">
+              <button className="rounded-full bg-black px-7 py-2.5 text-[12px] font-light text-white transition-opacity hover:opacity-85 md:px-9 md:py-3.5 md:text-[16px]">
+                Download now
+              </button>
+              <button className="rounded-full bg-black px-7 py-2.5 text-[12px] font-light text-white transition-opacity hover:opacity-85 md:px-9 md:py-3.5 md:text-[16px]">
+                Download now
+              </button>
+            </div>
+          </div>
+
+          <div className="mt-8 w-full max-w-[360px] md:mt-0 md:w-[50%] md:max-w-[520px]">
+            <div className="relative h-[520px] w-full md:h-[780px]">
+              <Image
+                src="/images/main.png"
+                alt="Biblio home screen preview"
+                fill
+                className="object-contain object-bottom"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="flex min-h-[68vh] w-full items-center bg-black px-6 py-16 text-white md:min-h-[70vh] md:px-8 md:py-20">
+        <div className="mx-auto w-full max-w-[1280px] px-8 text-center md:px-16">
+          <p
+            className="text-[32px] font-regular leading-[1.12] tracking-tight md:text-[58px]"
+            style={{ fontFamily: "var(--font-stack-sans)" }}
+          >
+            Welcome to Biblio — a smarter way to read, understand, and stay consistent with your books.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </section>
+
+      <div>
+        <PageTwoSection />
+      </div>
+
+      <div>
+        <ResearchPage />
+      </div>
     </div>
   );
 }
+
+
+
