@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import PageThreeSection from "./Page3Section";
 import PageFourSection from "./Page4Section";
@@ -19,6 +20,7 @@ export default function FeaturesPage() {
             <PageFiveSection />
             <PageSixSection />
             <PageSevenSection />
+            <Footer />
         </div>
     );
 }

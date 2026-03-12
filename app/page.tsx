@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import PageTwoSection from "./sections/FeaturesSection";
 import ResearchPage from "./sections/ResearchSection";
+import MeetTheDevSection from "./sections/MeetTheDevSection";
 
 export default function Home() {
   return (
@@ -67,6 +69,12 @@ export default function Home() {
       <div>
         <ResearchPage />
       </div>
+
+      <div>
+        <MeetTheDevSection />
+      </div>
+
+      <Footer />
     </div>
   );
 }

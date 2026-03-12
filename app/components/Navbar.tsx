@@ -6,9 +6,10 @@ export default function Navbar() {
         >
             {/* Logo — small, lowercase, minimal */}
             <span
-                className="text-sm font-medium tracking-wide text-zinc-800"
+                className="text-sm font-regular tracking-normal text-zinc-800"
+                style={{ fontFamily: "var(--font-stack-sans)" }}
             >
-                biblio
+                Biblio
             </span>
 
             {/* CTA button — pill-shaped, dark */}
