@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Navbar from "../components/Navbar";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
+import Footer from "../components/Footer";
 
 const highlightCards = [
     {
@@ -10,7 +11,7 @@ const highlightCards = [
         title: "Track your daily momentum.",
         description:
             "Stay aware of your progress with a streak system that keeps your reading rhythm visible and motivating every day.",
-        image: "/images/streaks/S1.png",
+        image: "/images/streaks/s1.png",
         imageWrapperClass:
             "pointer-events-none absolute bottom-0 left-1/2 h-[80%] w-[86%] -translate-x-1/2 md:h-[92%] md:w-[92%]",
         imageClass: "object-contain object-bottom",
@@ -70,9 +71,9 @@ const progressionSteps = [
 
 export default function StreaksPage() {
     const trackRef = useRef<HTMLDivElement>(null);
-    const progressionTrackRef = useRef<HTMLDivElement>(null);
+    const stackSectionRef = useRef<HTMLDivElement>(null);
     const [activeCard, setActiveCard] = useState(0);
-    const [activeProgressionStep, setActiveProgressionStep] = useState(0);
+    const [stackProgress, setStackProgress] = useState(0);
 
     const makeScrollHandler = (
         ref: React.RefObject<HTMLDivElement | null>,
@@ -93,7 +94,20 @@ export default function StreaksPage() {
     };
 
     const handleTrackScroll = makeScrollHandler(trackRef, highlightCards.length, setActiveCard, activeCard);
-    const handleProgressionScroll = makeScrollHandler(progressionTrackRef, progressionSteps.length, setActiveProgressionStep, activeProgressionStep);
+
+    useEffect(() => {
+        const onScroll = () => {
+            const el = stackSectionRef.current;
+            if (!el) return;
+            const rect = el.getBoundingClientRect();
+            const scrolled = Math.max(0, -rect.top);
+            const progress = scrolled / window.innerHeight;
+            setStackProgress(Math.min(progressionSteps.length - 1, progress));
+        };
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
 
     return (
         <main
@@ -206,84 +220,71 @@ export default function StreaksPage() {
                 </div>
             </section>
 
-            <section className="relative w-full overflow-hidden bg-[#EDEAE4]">
-                <div
-                    ref={progressionTrackRef}
-                    onScroll={handleProgressionScroll}
-                    className="flex h-screen snap-x snap-mandatory scroll-smooth overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-                >
-                    {progressionSteps.map((step) => (
-                        <div
-                            key={step.id}
-                            className="flex h-full w-full shrink-0 snap-start flex-col items-center px-6 pt-24 pb-6 md:px-10 md:pt-28 md:pb-8"
-                        >
-                            {/* Small text at top */}
-                            <div className="w-full max-w-[600px] text-center">
-                                <h3
-                                    className="text-[22px] font-normal leading-[1.05] tracking-tight text-zinc-900 md:text-[32px]"
-                                    style={{ fontFamily: "var(--font-stack-sans)" }}
-                                >
-                                    {step.title}
-                                </h3>
-                                <p className="mt-2 text-[14px] leading-[1.4] text-zinc-600 md:text-[17px]">
-                                    {step.description}
-                                </p>
-                            </div>
-
-                            {/* Big image */}
-                            <div className="relative mt-6 w-full max-w-[520px] flex-1 md:max-w-[640px]">
-                                <Image
-                                    src={step.image}
-                                    alt={step.title}
-                                    fill
-                                    className="object-contain object-bottom"
-                                    sizes="(min-width: 768px) 640px, 100vw"
-                                />
-                            </div>
-
-                        </div>
-                    ))}
-                </div>
-
-                <div className="pointer-events-none absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 items-center justify-center gap-3 md:bottom-10">
-                    {progressionSteps.map((_, dotIndex) => (
-                        <span
-                            key={dotIndex}
-                            className={`rounded-full transition-all duration-300 ${activeProgressionStep === dotIndex
-                                ? "h-2 w-7 bg-zinc-700/80"
-                                : "h-2 w-2 bg-zinc-400/60"
-                                }`}
-                        />
-                    ))}
-                </div>
-            </section>
-
             <section
-                className="w-full bg-white px-6 py-14 text-black md:px-10 md:py-16"
-                style={{ fontFamily: "var(--font-neue-montreal)" }}
+                ref={stackSectionRef}
+                className="relative w-full bg-[#EDEAE4]"
+                style={{ height: `calc(${progressionSteps.length} * 100vh)` }}
             >
-                <div className="mx-auto flex w-full max-w-[980px] flex-col items-center text-center">
-                    <p
-                        className="text-[32px] font-normal leading-[1.08] tracking-tight text-zinc-900 md:text-[56px]"
-                        style={{ fontFamily: "var(--font-stack-sans)" }}
-                    >
-                        Biblio
-                    </p>
-                    <p
-                        className="mt-2 text-[24px] font-light leading-[1.08] tracking-slug text-zinc-900 md:mt-3 md:text-[30px]"
-                        style={{ fontFamily: "var(--font-stack-sans)" }}
-                    >
-                        All this and much more
-                    </p>
-                    <button className="mt-8 rounded-full bg-zinc-800 px-5 py-2 text-xs font-medium text-white transition-opacity hover:opacity-80 md:mt-10 md:px-6 md:py-3 md:text-sm">
-                        Download now
-                    </button>
+                <div className="sticky top-0 h-screen overflow-hidden">
+                    {progressionSteps.map((step, i) => {
+                        const n = progressionSteps.length;
+                        const past = Math.max(0, Math.min(1, stackProgress - i));
+                        const upcoming = Math.max(0, i - stackProgress);
+                        const scale = past > 0
+                            ? 1 - past * 0.08
+                            : Math.max(0.88, 1 - upcoming * 0.04);
+                        const translateY = past > 0 ? -past * 100 : 0;
 
-                    <p className="mt-8 max-w-[820px] text-center text-[11px] leading-[1.5] text-zinc-500 md:mt-10 md:text-xs">
-                        Note: The market analysis and competitive research presented on this site were conducted for educational and portfolio purposes to demonstrate product strategy and user experience design principles. All brand names and trademarks are the property of their respective owners.
-                    </p>
+                        return (
+                            <div
+                                key={step.id}
+                                style={{
+                                    position: "absolute",
+                                    inset: 0,
+                                    zIndex: (n - i) * 10,
+                                    transform: `translateY(${translateY}%) scale(${scale})`,
+                                    transformOrigin: "top center",
+                                }}
+                                className="flex items-center justify-center px-4 pt-10 pb-6 md:block md:px-8 md:pt-24 md:pb-8"
+                            >
+                                <div className="mx-auto h-auto w-full max-w-310 md:h-full">
+                                    <article className="h-[84vh] min-h-155 w-full overflow-hidden rounded-[30px] border border-zinc-200 bg-white shadow-[0_16px_45px_rgba(24,24,24,0.14)] md:h-full md:min-h-0 md:rounded-[36px]">
+                                        <div className="relative h-full md:flex md:items-center">
+                                            <div className="absolute inset-0 md:relative md:h-full md:w-[56%] md:border-r md:border-zinc-100">
+                                                <Image
+                                                    src={step.image}
+                                                    alt={step.title}
+                                                    fill
+                                                    className="object-contain object-center p-2 md:object-contain md:object-bottom md:p-8"
+                                                    sizes="(min-width: 768px) 56vw, 100vw"
+                                                />
+                                            </div>
+
+                                            <div className="absolute inset-x-0 bottom-0 z-10 flex min-h-[46%] w-full flex-col justify-end bg-linear-to-t from-black/95 via-black/75 to-transparent px-6 pt-7 pb-10 text-center text-white md:static md:min-h-0 md:w-[44%] md:justify-center md:bg-none md:px-10 md:py-8 md:text-left md:text-zinc-900 lg:px-12">
+                                                <p className="mb-3 text-xs font-medium uppercase tracking-widest text-zinc-200 md:text-zinc-400">
+                                                    {String(i + 1).padStart(2, "0")} / {String(n).padStart(2, "0")}
+                                                </p>
+                                                <h3
+                                                    className="text-[30px] font-normal leading-[1.02] tracking-tight md:text-[34px]"
+                                                    style={{ fontFamily: "var(--font-stack-sans)" }}
+                                                >
+                                                    {step.title}
+                                                </h3>
+                                                <p className="mt-3 text-[16px] leading-[1.35] text-zinc-100 md:text-[17px] md:leading-normal md:text-zinc-600">
+                                                    {step.description}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        );
+                    })}
+
                 </div>
             </section>
+            <Footer />
+           
         </main>
     );
 }

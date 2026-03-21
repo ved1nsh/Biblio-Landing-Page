@@ -73,7 +73,7 @@ export default function LibraryPage() {
                     <div className="mt-8 w-full max-w-[360px] md:mt-0 md:w-[50%] md:max-w-[520px]">
                         <div className="relative h-[520px] w-full md:h-[780px]">
                             <Image
-                                src="/images/library/l1.png"
+                                src="/images/library/ll1.png"
                                 alt="Library screen preview"
                                 fill
                                 className="object-contain object-bottom"

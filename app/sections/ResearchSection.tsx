@@ -28,7 +28,10 @@ export default function ResearchPage() {
                         </p>
 
                         <p className="mt-8 max-w-[760px] text-[16px] leading-[1.38] text-zinc-500 md:mt-8 md:text-[20px]">
-                            Mobile readers burdened by <span className="text-zinc-200">laggy interfaces and poor UI</span>, the reading experience has felt stagnant. Users are often forced to choose between a digital library that feels like a soulless file explorer or a physical shelf that stays completely offline. <span className="text-zinc-200">Biblio is the strategic response to these gaps—unifying the journey through a high-performance, intuitive ecosystem.</span>
+                            Mobile readers burdened by <span className="text-zinc-200">laggy interfaces and poor UI</span>, the reading experience has felt stagnant. Users are often forced to choose between a digital library that feels like a soulless file explorer or a physical shelf that stays completely offline. <span className="text-zinc-200">
+                                <br></br>
+                                <br></br>
+                                Biblio is the strategic response to these gaps—unifying the journey through a high-performance, intuitive ecosystem.</span>
                         </p>
 
                         <Link href="/research" className="mt-10 inline-flex items-center gap-3 rounded-full bg-white px-6 py-3 text-[15px] font-medium text-black transition-opacity hover:opacity-90 md:mt-10 md:gap-3 md:px-7 md:py-3 md:text-[18px]">

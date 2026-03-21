@@ -26,12 +26,13 @@ export default function MarketResearchPage() {
                         Market Research
                     </h1>
 
-                    <p className="mb-8 max-w-[820px] text-[18px] leading-[1.4] md:text-[26px]">
-                        Reading habits have changed dramatically in the digital era. While more people consume books through digital platforms, many readers still struggle with consistency, tracking progress, and understanding complex text.
+                    <p className="mb-8 max-w-300 text-[18px] leading-[1.4] md:text-[26px]">
+                        Reading today is no longer limited to physical books. Many readers now prefer digital formats, often downloading EPUB and PDF files to read on their devices.
+                        However, the tools available for this experience remain limited. Most reading apps either focus only on displaying files or only on tracking books, with no proper habit-forming features.
                     </p>
-
-                    <p className="max-w-[820px] text-[18px] leading-[1.4] md:text-[26px]">
-                        Before designing Biblio, I explored how readers interact with modern reading apps and what challenges they face in maintaining a regular reading habit.
+                    <p className="max-w-300 text-[18px] leading-[1.4] md:text-[26px]">
+                        This fragmentation creates a significant gap in the market, leaving readers without a cohesive ecosystem to support their reading habits.
+                        Before designing Biblio, I explored the many apps users use and what problems they face.
                     </p>
                 </div>
             </div>

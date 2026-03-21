@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import PageTwoSection from "./sections/FeaturesSection";
 import ResearchPage from "./sections/ResearchSection";
 import MeetTheDevSection from "./sections/MeetTheDevSection";
+import ClosingNoteSection from "./sections/ClosingNoteSection";
 
 export default function Home() {
   return (
@@ -72,6 +73,10 @@ export default function Home() {
 
       <div>
         <MeetTheDevSection />
+      </div>
+
+      <div>
+        <ClosingNoteSection />
       </div>
 
       <Footer />

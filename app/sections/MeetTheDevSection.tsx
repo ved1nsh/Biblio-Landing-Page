@@ -3,10 +3,10 @@ import Image from "next/image";
 export default function MeetTheDevSection() {
     return (
         <section
-            className="w-full bg-[#EDEAE4] px-6 py-14 md:px-10 md:py-20"
+            className="w-full bg-[#EDEAE4] px-6 py-18 md:px-10 md:py-24"
             style={{ fontFamily: "var(--font-neue-montreal)" }}
         >
-            <div className="mx-auto flex w-full max-w-[1200px] flex-col items-center">
+            <div className="mx-auto flex w-full max-w-300 flex-col items-center">
 
                 {/* Heading - Center Aligned */}
                 <h2
@@ -17,10 +17,10 @@ export default function MeetTheDevSection() {
                 </h2>
 
                 {/* Side-by-side content container */}
-                <div className="mt-10 flex w-full flex-col md:flex-row md:items-center md:gap-12 lg:gap-20">
+                <div className="mt-14 flex w-full flex-col md:mt-16 md:flex-row md:items-center md:gap-14 lg:gap-24">
 
                     {/* Text Content Area */}
-                    <div className="flex w-full flex-col order-2 md:order-1 md:w-1/2">
+                    <div className="order-2 flex w-full flex-col md:order-2 md:w-[54%]">
                         {/* Name + intro line */}
                         <p className="mt-8 text-[22px] font-semibold leading-[1.3] text-zinc-900 md:mt-0 md:text-[28px] lg:text-[32px]">
                             Hi, I am Vedansh Sharma,<br />and this is my story.
@@ -48,9 +48,9 @@ export default function MeetTheDevSection() {
                     </div>
 
                     {/* Image Area - Back to original default container */}
-                    <div className="w-full md:w-1/2 order-1 md:order-2">
+                    <div className="order-1 w-full md:order-1 md:w-[46%]">
                         <div className="w-full bg-[#EDEAE4]">
-                            <div className="relative h-[340px] w-full md:h-[420px] lg:h-[480px]">
+                            <div className="relative h-105 w-full md:h-135 lg:h-155">
                                 <Image
                                     src="/images/ved.png"
                                     alt="Vedansh Sharma"
@@ -60,6 +60,7 @@ export default function MeetTheDevSection() {
                                 />
                             </div>
                         </div>
+                       
                     </div>
 
                 </div>

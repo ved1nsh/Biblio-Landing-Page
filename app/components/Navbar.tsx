@@ -6,7 +6,7 @@ export default function Navbar() {
         >
             {/* Logo — small, lowercase, minimal */}
             <span
-                className="text-sm font-regular tracking-normal text-zinc-800"
+                className="text-normal font-regular tracking-normal text-zinc-800"
                 style={{ fontFamily: "var(--font-stack-sans)" }}
             >
                 Biblio

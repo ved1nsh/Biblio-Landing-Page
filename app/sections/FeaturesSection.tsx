@@ -28,16 +28,16 @@ const cards = [
     },
     {
         id: 4,
-        title: "Your insights, archived forever.",
-        desc: "Every quote you save and every note you write is synced to your personal journal, creating a searchable second brain of your knowledge.",
+        title: "Physical Books, Fully Tracked.",
+        desc: "Log your reading sessions, track progress, and stay consistent, even when you're reading a real book. Biblio turns physical reading into a measurable habit.",
         image: "/images/pybook.png",
         href: "/physicalbook",
     },
     {
         id: 5,
-        title: "Your insights, archived forever.",
-        desc: "Every quote you save and every note you write is synced to your personal journal, creating a searchable second brain of your knowledge.",
-        image: "/images/library.png",
+        title: "All Your Books. One Place.",
+        desc: "Organize your books into collections, track what you own, and plan what to read next — all in one place.",
+        image: "/images/library/ll2.png",
         href: "/library",
     },
 ];
