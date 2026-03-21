@@ -5,6 +5,7 @@ import PageTwoSection from "./sections/FeaturesSection";
 import ResearchPage from "./sections/ResearchSection";
 import MeetTheDevSection from "./sections/MeetTheDevSection";
 import ClosingNoteSection from "./sections/ClosingNoteSection";
+import ScrollReveal from "./components/ScrollReveal";
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
       className="min-h-screen w-full"
       style={{ backgroundColor: "#EDEAE4", fontFamily: "var(--font-neue-montreal)" }}
     >
-      <section className="w-full overflow-hidden bg-[#EDEAE4] px-6 pt-24 pb-8 md:px-10 md:pt-28 md:pb-12">
+      <ScrollReveal delayMs={20}>
+        <section className="w-full overflow-hidden bg-[#EDEAE4] px-6 pt-24 pb-8 md:px-10 md:pt-28 md:pb-12">
         <Navbar />
 
         <div className="mx-auto flex w-full max-w-[1280px] flex-col items-center text-center md:flex-row md:items-center md:justify-between md:text-left">
@@ -50,36 +52,49 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+        </section>
+      </ScrollReveal>
 
-      <section className="flex min-h-[68vh] w-full items-center bg-black px-6 py-16 text-white md:min-h-[70vh] md:px-8 md:py-20">
-        <div className="mx-auto w-full max-w-[1280px] px-8 text-center md:px-16">
-          <p
-            className="text-[32px] font-regular leading-[1.12] tracking-tight md:text-[58px]"
-            style={{ fontFamily: "var(--font-stack-sans)" }}
-          >
-            Welcome to Biblio — a smarter way to read, understand, and stay consistent with your books.
-          </p>
-        </div>
-      </section>
+      <ScrollReveal delayMs={60}>
+        <section className="flex min-h-[68vh] w-full items-center bg-black px-6 py-16 text-white md:min-h-[70vh] md:px-8 md:py-20">
+          <div className="mx-auto w-full max-w-[1280px] px-8 text-center md:px-16">
+            <p
+              className="text-[32px] font-regular leading-[1.12] tracking-tight md:text-[58px]"
+              style={{ fontFamily: "var(--font-stack-sans)" }}
+            >
+              Welcome to Biblio — a smarter way to read, understand, and stay consistent with your books.
+            </p>
+          </div>
+        </section>
+      </ScrollReveal>
 
-      <div>
+      <ScrollReveal delayMs={80}>
+        <div>
         <PageTwoSection />
-      </div>
+        </div>
+      </ScrollReveal>
 
-      <div>
+      <ScrollReveal delayMs={90}>
+        <div>
         <ResearchPage />
-      </div>
+        </div>
+      </ScrollReveal>
 
-      <div>
+      <ScrollReveal delayMs={100}>
+        <div>
         <MeetTheDevSection />
-      </div>
+        </div>
+      </ScrollReveal>
 
-      <div>
+      <ScrollReveal delayMs={120}>
+        <div>
         <ClosingNoteSection />
-      </div>
+        </div>
+      </ScrollReveal>
 
-      <Footer />
+      <ScrollReveal delayMs={80}>
+        <Footer />
+      </ScrollReveal>
     </div>
   );
 }

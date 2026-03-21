@@ -4,6 +4,7 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import { useRef, useState } from "react";
 import Footer from "../components/Footer";
+import ScrollReveal from "../components/ScrollReveal";
 
 const featureCards = [
     {
@@ -54,9 +55,12 @@ export default function LibraryPage() {
             className="w-full bg-[#EDEAE4] text-black"
             style={{ fontFamily: "var(--font-neue-montreal)" }}
         >
-            <Navbar />
+            <ScrollReveal delayMs={20}>
+                <Navbar />
+            </ScrollReveal>
 
-            <section className="w-full overflow-hidden bg-[#EDEAE4] px-6 pt-24 pb-8 md:px-10 md:pt-28 md:pb-12">
+            <ScrollReveal delayMs={40}>
+                <section className="w-full overflow-hidden bg-[#EDEAE4] px-6 pt-24 pb-8 md:px-10 md:pt-28 md:pb-12">
                 <div className="mx-auto flex w-full max-w-[1280px] flex-col items-center text-center md:flex-row md:items-center md:justify-between md:text-left">
                     <div className="md:w-[44%] md:max-w-[520px]">
                         <h1
@@ -82,9 +86,11 @@ export default function LibraryPage() {
                         </div>
                     </div>
                 </div>
-            </section>
+                </section>
+            </ScrollReveal>
 
-            <section className="w-full bg-black px-6 py-16 text-white md:px-10 md:py-24">
+            <ScrollReveal delayMs={60}>
+                <section className="w-full bg-black px-6 py-16 text-white md:px-10 md:py-24">
                 <div className="mx-auto max-w-[1020px] text-center">
                     <p
                         className="text-[22px] font-normal leading-[1.15] tracking-tight md:text-[42px]"
@@ -96,9 +102,11 @@ export default function LibraryPage() {
                         Biblio’s library system is designed for the modern collector. Whether it’s a physical copy on your nightstand or a digital file in the cloud, our interface brings them together. Categorize your world with fully customizable shelves—tailored exactly to your reading habits—and dive deep into your personal data with a single tap. This is your digital bookshelf, built to reflect your unique library.
                     </p>
                 </div>
-            </section>
+                </section>
+            </ScrollReveal>
 
-            <section className="w-full bg-[#EDEAE4] px-6 md:px-10">
+            <ScrollReveal delayMs={80}>
+                <section className="w-full bg-[#EDEAE4] px-6 md:px-10">
                 <div className="relative mx-auto h-[560px] w-full max-w-[382px] md:h-[860px] md:max-w-[860px]">
                     <Image
                         src="/images/library/l2.png"
@@ -107,9 +115,11 @@ export default function LibraryPage() {
                         className="object-contain object-top"
                     />
                 </div>
-            </section>
+                </section>
+            </ScrollReveal>
 
-            <section className="relative w-full overflow-hidden bg-white">
+            <ScrollReveal delayMs={100}>
+                <section className="relative w-full overflow-hidden bg-white">
                 <div
                     ref={trackRef}
                     onScroll={handleTrackScroll}
@@ -144,9 +154,11 @@ export default function LibraryPage() {
                         />
                     ))}
                 </div>
-            </section>
+                </section>
+            </ScrollReveal>
 
-            <section className="w-full bg-[#EDEAE4] px-6 md:px-10">
+            <ScrollReveal delayMs={120}>
+                <section className="w-full bg-[#EDEAE4] px-6 md:px-10">
                 <div className="relative mx-auto aspect-square w-full max-w-[760px] overflow-hidden md:h-[860px] md:max-w-[860px]">
                     <div className="absolute inset-x-0 top-4 bottom-0 md:top-6">
                         <Image
@@ -157,9 +169,12 @@ export default function LibraryPage() {
                         />
                     </div>
                 </div>
-            </section>
+                </section>
+            </ScrollReveal>
 
-            <Footer />
+            <ScrollReveal delayMs={80}>
+                <Footer />
+            </ScrollReveal>
         </main>
     );
 }

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import { useRef, useState, useEffect } from "react";
 import Footer from "../components/Footer";
+import ScrollReveal from "../components/ScrollReveal";
 
 const highlightCards = [
     {
@@ -11,7 +12,7 @@ const highlightCards = [
         title: "Track your daily momentum.",
         description:
             "Stay aware of your progress with a streak system that keeps your reading rhythm visible and motivating every day.",
-        image: "/images/streaks/s1.png",
+        image: "/images/streaks/images1.png",
         imageWrapperClass:
             "pointer-events-none absolute bottom-0 left-1/2 h-[80%] w-[86%] -translate-x-1/2 md:h-[92%] md:w-[92%]",
         imageClass: "object-contain object-bottom",
@@ -114,9 +115,12 @@ export default function StreaksPage() {
             className="w-full bg-white text-black"
             style={{ fontFamily: "var(--font-neue-montreal)" }}
         >
-            <Navbar />
+            <ScrollReveal delayMs={20}>
+                <Navbar />
+            </ScrollReveal>
 
-            <section className="w-full overflow-hidden bg-[#EDEAE4] px-6 pt-24 pb-8 md:px-10 md:pt-28 md:pb-12">
+            <ScrollReveal delayMs={40}>
+                <section className="w-full overflow-hidden bg-[#EDEAE4] px-6 pt-24 pb-8 md:px-10 md:pt-28 md:pb-12">
                 <div className="mx-auto flex w-full max-w-[1280px] flex-col items-center text-center md:flex-row md:items-center md:justify-between md:text-left">
                     <div className="md:w-[44%] md:max-w-[520px]">
                         <h1
@@ -143,9 +147,11 @@ export default function StreaksPage() {
                         </div>
                     </div>
                 </div>
-            </section>
+                </section>
+            </ScrollReveal>
 
-            <section className="w-full bg-black px-6 py-16 text-white md:px-10 md:py-24">
+            <ScrollReveal delayMs={60}>
+                <section className="w-full bg-black px-6 py-16 text-white md:px-10 md:py-24">
                 <div className="mx-auto max-w-[1020px] text-center">
                     <p className="text-[22px] font-normal leading-[1.15] tracking-tight md:text-[42px]" style={{ fontFamily: "var(--font-stack-sans)" }}>
                         Consistency deserves a better system.
@@ -155,9 +161,11 @@ export default function StreaksPage() {
                         more intentional approach to motivation. It can later be replaced with the final product narrative.
                     </p>
                 </div>
-            </section>
+                </section>
+            </ScrollReveal>
 
-            <section className="w-full bg-white px-6 py-18 md:px-10 md:py-24">
+            <ScrollReveal delayMs={80}>
+                <section className="w-full bg-white px-6 py-18 md:px-10 md:py-24">
                 <div className="mx-auto flex w-full max-w-[1280px] flex-col">
                     <div className="max-w-[860px]">
                         <h2
@@ -218,9 +226,11 @@ export default function StreaksPage() {
                         </div>
                     </div>
                 </div>
-            </section>
+                </section>
+            </ScrollReveal>
 
-            <section
+            <ScrollReveal delayMs={100}>
+                <section
                 ref={stackSectionRef}
                 className="relative w-full bg-[#EDEAE4]"
                 style={{ height: `calc(${progressionSteps.length} * 100vh)` }}
@@ -282,8 +292,11 @@ export default function StreaksPage() {
                     })}
 
                 </div>
-            </section>
-            <Footer />
+                </section>
+            </ScrollReveal>
+            <ScrollReveal delayMs={80}>
+                <Footer />
+            </ScrollReveal>
            
         </main>
     );

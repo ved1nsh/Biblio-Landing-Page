@@ -4,6 +4,7 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useRef, useState } from "react";
+import ScrollReveal from "../components/ScrollReveal";
 
 const featureCards = [
     {
@@ -52,10 +53,13 @@ export default function PhysicalBookPage() {
             className="w-full bg-[#EDEAE4] text-black"
             style={{ fontFamily: "var(--font-neue-montreal)" }}
         >
-            <Navbar />
+            <ScrollReveal delayMs={20}>
+                <Navbar />
+            </ScrollReveal>
 
             {/* ── Section 1: Intro ── */}
-            <section className="w-full overflow-hidden bg-[#EDEAE4] px-6 pt-24 pb-8 md:px-10 md:pt-28 md:pb-12">
+            <ScrollReveal delayMs={40}>
+                <section className="w-full overflow-hidden bg-[#EDEAE4] px-6 pt-24 pb-8 md:px-10 md:pt-28 md:pb-12">
                 <div className="mx-auto flex w-full max-w-[1280px] flex-col items-center text-center md:flex-row md:items-center md:justify-between md:text-left">
                     <div className="md:w-[44%] md:max-w-[520px]">
                         <h1
@@ -81,10 +85,12 @@ export default function PhysicalBookPage() {
                         </div>
                     </div>
                 </div>
-            </section>
+                </section>
+            </ScrollReveal>
 
             {/* ── Section 2: Black intro ── */}
-            <section className="w-full bg-black px-6 py-16 text-white md:px-10 md:py-24">
+            <ScrollReveal delayMs={60}>
+                <section className="w-full bg-black px-6 py-16 text-white md:px-10 md:py-24">
                 <div className="mx-auto max-w-[1020px] text-center">
                     <p
                         className="text-[22px] font-normal leading-[1.15] tracking-tight md:text-[42px]"
@@ -99,10 +105,12 @@ export default function PhysicalBookPage() {
                         automate your streaks, and archive your handwritten insights into a searchable, permanent journal.
                     </p>
                 </div>
-            </section>
+                </section>
+            </ScrollReveal>
 
             {/* ── Section 3: Fixed image (p2) ── */}
-            <section className="w-full bg-[#EDEAE4] px-6 pt-10 md:px-10 md:pt-14">
+            <ScrollReveal delayMs={80}>
+                <section className="w-full bg-[#EDEAE4] px-6 pt-10 md:px-10 md:pt-14">
                 <div className="relative mx-auto aspect-square w-full max-w-[760px] md:h-[860px] md:max-w-[860px]">
                     <Image
                         src="/images/physicalbook/p2.png"
@@ -111,10 +119,12 @@ export default function PhysicalBookPage() {
                         className="object-contain"
                     />
                 </div>
-            </section>
+                </section>
+            </ScrollReveal>
 
             {/* ── Section 4: Swipeable text-only cards ── */}
-            <section className="relative w-full overflow-hidden bg-white">
+            <ScrollReveal delayMs={100}>
+                <section className="relative w-full overflow-hidden bg-white">
                 <div
                     ref={trackRef}
                     onScroll={handleTrackScroll}
@@ -150,10 +160,12 @@ export default function PhysicalBookPage() {
                         />
                     ))}
                 </div>
-            </section>
+                </section>
+            </ScrollReveal>
 
             {/* ── Section 5: Fixed image (p3) ── */}
-            <section className="w-full bg-[#EDEAE4] px-6 md:px-10">
+            <ScrollReveal delayMs={120}>
+                <section className="w-full bg-[#EDEAE4] px-6 md:px-10">
                 <div className="relative mx-auto aspect-square w-full max-w-[760px] overflow-hidden md:h-[860px] md:max-w-[860px]">
                     <div className="absolute inset-0">
                         <Image
@@ -164,10 +176,13 @@ export default function PhysicalBookPage() {
                         />
                     </div>
                 </div>
-            </section>
+                </section>
+            </ScrollReveal>
 
             {/* ── Footer CTA ── */}
-            <Footer />
+            <ScrollReveal delayMs={80}>
+                <Footer />
+            </ScrollReveal>
         </main>
     );
 }

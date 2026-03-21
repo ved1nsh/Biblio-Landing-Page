@@ -1,13 +1,15 @@
 import Footer from "../components/Footer";
+import ScrollReveal from "../components/ScrollReveal";
 
 export default function PrivacyPolicyPage() {
     return (
         <>
-            <section
-                className="w-full bg-[#EDEAE4] px-6 py-16 text-zinc-900 md:px-10 md:py-20"
-                style={{ fontFamily: "var(--font-neue-montreal)" }}
-            >
-                <div className="mx-auto w-full max-w-4xl">
+            <ScrollReveal delayMs={30}>
+                <section
+                    className="w-full bg-[#EDEAE4] px-6 py-16 text-zinc-900 md:px-10 md:py-20"
+                    style={{ fontFamily: "var(--font-neue-montreal)" }}
+                >
+                    <div className="mx-auto w-full max-w-4xl">
                     <h1
                         className="text-center text-[36px] font-normal leading-tight tracking-tight md:text-[52px]"
                         style={{ fontFamily: "var(--font-stack-sans)" }}
@@ -138,10 +140,13 @@ export default function PrivacyPolicyPage() {
                             </p>
                         </div>
                     </div>
-                </div>
-            </section>
+                    </div>
+                </section>
+            </ScrollReveal>
 
-            <Footer />
+            <ScrollReveal delayMs={80}>
+                <Footer />
+            </ScrollReveal>
         </>
     );
 }

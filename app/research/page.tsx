@@ -2,6 +2,7 @@ import Link from "next/link";
 import BiblioVsOthersSection from "./BiblioVsOthersSection";
 import PainPointsSection from "./PainPointsSection";
 import ResearchSummarySections from "./ResearchSummarySections";
+import ScrollReveal from "../components/ScrollReveal";
 
 
 export default function MarketResearchPage() {
@@ -10,14 +11,15 @@ export default function MarketResearchPage() {
             className="flex min-h-screen w-full flex-col bg-white text-black"
             style={{ fontFamily: "var(--font-neue-montreal)" }}
         >
-            <div className="w-full px-6 py-20 md:px-10 md:py-32">
-                <div className="mx-auto flex w-full max-w-[1240px] flex-col items-center text-center">
-                    <Link
-                        href="/"
-                        className="mb-12 inline-flex items-center text-sm font-medium text-zinc-500 transition-colors hover:text-black"
-                    >
-                        ← Back to Home
-                    </Link>
+            <ScrollReveal delayMs={30}>
+                <div className="w-full px-6 py-20 md:px-10 md:py-32">
+                    <div className="mx-auto flex w-full max-w-[1240px] flex-col items-center text-center">
+                        <Link
+                            href="/"
+                            className="mb-12 inline-flex items-center text-sm font-medium text-zinc-500 transition-colors hover:text-black"
+                        >
+                            ← Back to Home
+                        </Link>
 
                     <h1
                         className="mb-10 max-w-[820px] bg-gradient-to-r from-[#6F63FF] via-[#9B56D6] to-[#E654A4] bg-clip-text text-[40px] font-normal leading-[1.12] tracking-tight text-transparent md:mb-14 md:text-7xl"
@@ -30,15 +32,17 @@ export default function MarketResearchPage() {
                         Reading today is no longer limited to physical books. Many readers now prefer digital formats, often downloading EPUB and PDF files to read on their devices.
                         However, the tools available for this experience remain limited. Most reading apps either focus only on displaying files or only on tracking books, with no proper habit-forming features.
                     </p>
-                    <p className="max-w-300 text-[18px] leading-[1.4] md:text-[26px]">
-                        This fragmentation creates a significant gap in the market, leaving readers without a cohesive ecosystem to support their reading habits.
-                        Before designing Biblio, I explored the many apps users use and what problems they face.
-                    </p>
+                        <p className="max-w-300 text-[18px] leading-[1.4] md:text-[26px]">
+                            This fragmentation creates a significant gap in the market, leaving readers without a cohesive ecosystem to support their reading habits.
+                            Before designing Biblio, I explored the many apps users use and what problems they face.
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </ScrollReveal>
 
-            <section className="w-full bg-black px-6 py-20 text-white md:px-10 md:py-28">
-                <div className="mx-auto flex w-full max-w-[1040px] flex-col items-center text-center">
+            <ScrollReveal delayMs={60}>
+                <section className="w-full bg-black px-6 py-20 text-white md:px-10 md:py-28">
+                    <div className="mx-auto flex w-full max-w-[1040px] flex-col items-center text-center">
                     <h1
                         className="mb-10 max-w-[820px] text-[40px] font-normal leading-[1.08] tracking-tight text-white md:mb-14 md:text-[72px]"
                         style={{ fontFamily: "var(--font-stack-sans)" }}
@@ -84,26 +88,33 @@ export default function MarketResearchPage() {
                         </div>
                     </div>
 
-                    <div className="mt-16 max-w-[980px] space-y-10 text-center md:mt-20 md:space-y-12">
-                        <p className="text-[18px] leading-[1.35] text-zinc-100 md:text-[28px]">
-                            Biblio is a strategic response to a fragmented reading landscape where over 95 million users are currently forced to choose between legacy digital readers and disconnected habit trackers. By identifying the core "Format" and "Habit" gaps, this research moves beyond aesthetics to solve the real-world friction of laggy interfaces, poor UI/UX, and the psychological sense of loss that occurs when a story ends.
-                        </p>
+                        <div className="mt-16 max-w-[980px] space-y-10 text-center md:mt-20 md:space-y-12">
+                            <p className="text-[18px] leading-[1.35] text-zinc-100 md:text-[28px]">
+                                Biblio is a strategic response to a fragmented reading landscape where over 95 million users are currently forced to choose between legacy digital readers and disconnected habit trackers. By identifying the core "Format" and "Habit" gaps, this research moves beyond aesthetics to solve the real-world friction of laggy interfaces, poor UI/UX, and the psychological sense of loss that occurs when a story ends.
+                            </p>
 
-                        <p className="text-[18px] leading-[1.35] text-zinc-100 md:text-[28px]">
-                            Biblio replaces these dated, high-latency workflows with a singular, high-performance environment that bridges the physical and digital worlds through AI-powered contextual intelligence.
-                        </p>
+                            <p className="text-[18px] leading-[1.35] text-zinc-100 md:text-[28px]">
+                                Biblio replaces these dated, high-latency workflows with a singular, high-performance environment that bridges the physical and digital worlds through AI-powered contextual intelligence.
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </ScrollReveal>
 
             {/* User Pain Points Section */}
-            <PainPointsSection />
+            <ScrollReveal delayMs={80}>
+                <PainPointsSection />
+            </ScrollReveal>
 
             {/* Biblio vs Others Section */}
-            <BiblioVsOthersSection />
+            <ScrollReveal delayMs={100}>
+                <BiblioVsOthersSection />
+            </ScrollReveal>
 
             {/* Research Summary Sections */}
-            <ResearchSummarySections />
+            <ScrollReveal delayMs={120}>
+                <ResearchSummarySections />
+            </ScrollReveal>
         </main>
     );
 }
