@@ -1,16 +1,29 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 export default function Navbar() {
+    const pathname = usePathname();
+
+    if (pathname === "/research") {
+        return null;
+    }
+
     return (
         <nav
             className="fixed inset-x-0 top-0 z-50 flex w-full items-center justify-between bg-[#EDEAE4] px-6 py-5 md:px-16"
             style={{ fontFamily: "var(--font-neue-montreal)" }}
         >
             {/* Logo — small, lowercase, minimal */}
-            <span
-                className="text-normal font-regular tracking-normal text-zinc-800"
-                style={{ fontFamily: "var(--font-stack-sans)" }}
-            >
-                Biblio
-            </span>
+            <Link href="/">
+                <span
+                    className="text-normal font-regular tracking-normal text-zinc-800"
+                    style={{ fontFamily: "var(--font-stack-sans)" }}
+                >
+                    Biblio
+                </span>
+            </Link>
 
             {/* CTA button — pill-shaped, dark */}
             <button

@@ -41,7 +41,8 @@ const aiCards = [
 export default function PageSixSection() {
     return (
         <section
-            className="w-full overflow-hidden bg-[#EDEAE4] py-10 md:py-12"
+            id="ai"
+            className="w-full scroll-mt-20 overflow-hidden bg-[#EDEAE4] py-10 md:py-12 md:scroll-mt-24"
             style={{ fontFamily: "var(--font-neue-montreal)" }}
         >
             <div className="mx-auto w-full px-6 md:px-10">

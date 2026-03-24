@@ -33,6 +33,8 @@ export const metadata: Metadata = {
   description: "Your one stop application for all your digital reading needs",
 };
 
+import Navbar from "./components/Navbar";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -43,6 +45,7 @@ export default function RootLayout({
       <body
         className={`${neueMontreal.variable} ${stackSans.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

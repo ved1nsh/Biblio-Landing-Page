@@ -1,11 +1,12 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import PageThreeSection from "./Page3Section";
-import PageFourSection from "./Page4Section";
-import PageFiveSection from "./Page5Section";
-import PageSixSection from "./Page6Section";
-import PageSevenSection from "./Page7Section";
+
 import ScrollReveal from "../components/ScrollReveal";
+import PageThreeSection from "./landingpage";
+import PageFourSection from "./font";
+import PageFiveSection from "./notes";
+import PageSixSection from "./ai";
+import PageSevenSection from "./journal";
 
 
 export default function FeaturesPage() {

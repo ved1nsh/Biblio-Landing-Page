@@ -17,7 +17,7 @@ const cards = [
         title: "Read with an AI companion.",
         desc: "Don't just consume text—interact with it. Highlight to get instant context, definitions, or summaries powered by advanced AI.",
         image: "/images/page2/page2two.png",
-        href: "/features",
+        href: "/features#ai",
     },
     {
         id: 3,
