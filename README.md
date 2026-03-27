@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Biblio — Landing Page
 
-## Getting Started
+A modern, responsive landing page for **Biblio**, a reading-focused application designed to improve the digital reading experience.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📖 About Biblio
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Biblio is built to address the limitations of existing EPUB and PDF reading applications, which often suffer from poor UI/UX, laggy performance, and fragmented workflows.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The product focuses on delivering a **clean, high-performance reading experience**, while integrating features that enhance engagement and usability.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Key ideas behind Biblio:
+- Improve the core reading experience (fast, minimal, intuitive)
+- Reduce fragmentation by combining reading, tracking, and notes
+- Enhance understanding through AI-assisted features
+- Support both digital and physical reading workflows
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 About This Repository
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This repository contains the **landing page** for Biblio.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The goal of the landing page is to:
+- Clearly communicate the product vision
+- Present market research and product thinking
+- Showcase features and design decisions
+- Serve as a central hub for users and recruiters
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✨ Features of the Landing Page
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Clean, minimal UI inspired by modern product design
+- Structured product case study (Market Research, Features, etc.)
+- Responsive design across devices
+- Smooth navigation with section-based layout
+- Focus on readability and visual hierarchy
+
+---
+
+## 🧠 Product Thinking
+
+This project is not just a UI implementation — it reflects a **product-first approach**.
+
+The landing page includes:
+- Market research and problem analysis
+- Competitive positioning
+- User-focused design decisions
+- Clear product narrative and storytelling
+
+---
+
+## 🛠 Tech Stack
+
+- Frontend: React, JavaScript, TypeScript, TalwindCSS
+- Deployment: Vercel
+
