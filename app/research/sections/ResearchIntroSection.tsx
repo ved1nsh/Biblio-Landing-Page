@@ -1,16 +1,16 @@
 export default function ResearchIntroSection() {
     return (
-        <section className="w-full bg-[#F2EFE7] px-6 py-8 text-black md:px-10 md:py-16">
+        <section className="w-full bg-[#F2EFE7] px-6 py-16 text-black md:px-10 md:py-24">
             <div className="mx-auto w-full max-w-[1360px]">
                 <div className="rounded-[32px] bg-[#F2EFE7]">
                     <h2
-                        className="text-[44px] font-normal leading-[0.95] tracking-[-0.04em] text-black md:text-[88px]"
+                        className="text-[36px] font-normal leading-[0.95] tracking-[-0.04em] text-black md:text-[88px]"
                         style={{ fontFamily: "var(--font-stack-sans)" }}
                     >
                         Introduction
                     </h2>
 
-                    <div className="mt-10 max-w-[1500px] space-y-8 text-[18px] leading-[1.25] text-zinc-900 md:mt-12 md:space-y-10 md:text-[26px]">
+                    <div className="mt-8 max-w-[1500px] space-y-6 text-[16px] leading-[1.25] text-zinc-900 md:mt-12 md:space-y-10 md:text-[26px]">
                         <p>
                             This research explores the opportunity to improve the digital reading experience through Biblio, a mobile application designed to provide a clean, fast, and user - friendly way to read EPUB and PDF files.
                             <br></br>

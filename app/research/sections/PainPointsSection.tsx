@@ -79,20 +79,20 @@ export default function PainPointsSection() {
 
     return (
         <section
-            className="w-full bg-[#F2EFE7] pb-16 pt-4 md:pb-24 md:pt-8"
+            className="w-full bg-[#F2EFE7] py-20 md:py-28"
             style={{ fontFamily: "var(--font-neue-montreal)" }}
         >
             <div className="mx-auto flex w-full max-w-[1400px] flex-col px-6 md:px-10">
                 {/* Heading */}
                 <div className="mb-10 flex max-w-[920px] flex-col items-center self-center text-center md:mb-16">
                     <h2
-                        className="bg-gradient-to-r from-[#000000] via-[#000000] to-[#000000] bg-clip-text pb-2 text-[44px] font-normal leading-[1.1] tracking-[-0.04em] text-transparent md:pb-4 md:text-[88px] md:leading-[1.05]"
+                        className="bg-gradient-to-r from-[#6F63FF] via-[#9B56D6] to-[#E654A4] bg-clip-text pb-2 text-[36px] font-normal leading-[1.1] tracking-[-0.04em] text-transparent md:pb-4 md:text-[88px] md:leading-[1.05]"
 
                         style={{ fontFamily: "var(--font-stack-sans)" }}
                     >
                         User pain points
                     </h2>
-                    <p className="mt-4 max-w-[540px] text-lg font-medium leading-[1.3] text-zinc-800 md:mt-6 md:text-[22px]">
+                    <p className="mt-4 max-w-[540px] text-[16px] font-medium leading-[1.3] text-zinc-800 md:mt-6 md:text-[22px]">
                         Understanding the challenges readers face when using modern reading tools.
                     </p>
                 </div>
@@ -107,15 +107,15 @@ export default function PainPointsSection() {
                         {painPoints.map((point) => (
                             <article
                                 key={point.id}
-                                className="flex min-h-[540px] w-[92%] shrink-0 snap-start flex-col rounded-[32px] bg-white px-8 py-10 shadow-[0_20px_50px_rgba(0,0,0,0.05)] md:min-h-[640px] md:w-[560px] md:rounded-[36px] md:px-12 md:py-14"
+                                className="flex min-h-[460px] w-[92%] shrink-0 snap-start flex-col rounded-[32px] bg-white px-8 py-10 shadow-[0_20px_50px_rgba(0,0,0,0.05)] md:min-h-[640px] md:w-[560px] md:rounded-[36px] md:px-12 md:py-14"
                             >
                                 <h3
-                                    className="mb-10 whitespace-pre-line text-[28px] font-medium leading-[1.12] tracking-tight text-black md:mb-12 md:text-[34px]"
+                                    className="mb-10 whitespace-pre-line text-[24px] font-medium leading-[1.12] tracking-tight text-black md:mb-12 md:text-[34px]"
 
                                 >
                                     {point.title}
                                 </h3>
-                                <div className="text-[17px] leading-[1.7] text-zinc-700 md:text-[21px] md:leading-[1.75]">
+                                <div className="text-[15px] leading-[1.7] text-zinc-700 md:text-[21px] md:leading-[1.75]">
                                     {point.body}
                                 </div>
                             </article>

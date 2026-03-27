@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import DownloadModal from "./DownloadModal";
 
 export default function Footer() {
     const [isContactOpen, setIsContactOpen] = useState(false);
+    const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
 
     useEffect(() => {
         if (!isContactOpen) {
@@ -45,7 +47,10 @@ export default function Footer() {
                     >
                         All this and much more
                     </p>
-                    <button className="mt-8 rounded-full bg-zinc-800 px-5 py-2 text-xs font-medium text-white transition-opacity hover:opacity-80 md:mt-10 md:px-6 md:py-3 md:text-sm">
+                    <button
+                        onClick={() => setIsDownloadModalOpen(true)}
+                        className="mt-8 rounded-full bg-zinc-800 px-5 py-2 text-xs font-medium text-white transition-opacity hover:opacity-80 md:mt-10 md:px-6 md:py-3 md:text-sm"
+                    >
                         Download now
                     </button>
 
@@ -122,7 +127,7 @@ export default function Footer() {
                             >
                                 <span className="text-sm text-zinc-200 md:text-base">Twitter</span>
                                 <span className="text-sm text-zinc-400">@app_biblio
-</span>
+                                </span>
                             </a>
 
                             <a
@@ -136,6 +141,11 @@ export default function Footer() {
                     </div>
                 </div>
             ) : null}
+
+            <DownloadModal
+                isOpen={isDownloadModalOpen}
+                onClose={() => setIsDownloadModalOpen(false)}
+            />
         </>
     );
 }

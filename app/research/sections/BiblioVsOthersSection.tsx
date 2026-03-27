@@ -97,18 +97,18 @@ export default function BiblioVsOthersSection() {
 
     return (
         <section
-            className="w-full bg-[#F2EFE7] px-6 pb-6 pt-10 md:px-10 md:pb-8 md:pt-16"
+            className="w-full bg-[#F2EFE7] px-6 py-16 md:px-10 md:py-24"
             style={{ fontFamily: "var(--font-neue-montreal)" }}
         >
             <div className="mx-auto flex w-full max-w-[1280px] flex-col items-center">
                 <div className="max-w-[860px] text-center">
                     <h2
-                        className="bg-gradient-to-r from-[#000000] via-[#000000] to-[#000000] bg-clip-text text-[44px] font-normal leading-[0.98] tracking-tight text-transparent md:text-[84px]"
+                        className="bg-gradient-to-r from-[#6F63FF] via-[#9B56D6] to-[#E654A4] bg-clip-text text-[36px] font-normal leading-[0.98] tracking-tight text-transparent md:text-[84px]"
                         style={{ fontFamily: "var(--font-stack-sans)" }}
                     >
                         Biblio vs Others
                     </h2>
-                    <p className="mx-auto mt-5 max-w-[1280px] text-[18px] leading-[1.28] text-zinc-800 md:mt-6 md:text-[28px]">
+                    <p className="mx-auto mt-5 max-w-[1280px] text-[16px] leading-[1.28] text-zinc-800 md:mt-6 md:text-[28px]">
                         This section explores the digital reading ecosystem, analyzing popular reading tools and identifying key user pain points. The insights gathered here helped shape the features and design decisions behind Biblio.
                     </p>
                 </div>
@@ -127,7 +127,7 @@ export default function BiblioVsOthersSection() {
                                 <div className="flex flex-col gap-8 md:grid md:grid-cols-[320px_minmax(0,1fr)] md:gap-10 lg:grid-cols-[360px_minmax(0,1fr)]">
                                     <div className="flex flex-col items-center text-center md:items-start md:text-left">
                                         <h3
-                                            className="text-[26px] font-medium leading-[1.1] tracking-tight md:text-[38px]"
+                                            className="text-[24px] font-medium leading-[1.1] tracking-tight md:text-[38px]"
                                             style={{ fontFamily: "var(--font-stack-sans)" }}
                                         >
                                             {card.title}
@@ -143,7 +143,7 @@ export default function BiblioVsOthersSection() {
                                         </div>
 
                                         <p
-                                            className="mt-7 max-w-[280px] text-[19px] font-medium leading-[1.18] text-white md:mt-8 md:max-w-none md:text-[28px]"
+                                            className="mt-7 max-w-[280px] text-[16px] font-medium leading-[1.18] text-white md:mt-8 md:max-w-none md:text-[28px]"
                                             style={{ fontFamily: "var(--font-stack-sans)" }}
                                         >
                                             {card.downloads}
@@ -154,7 +154,7 @@ export default function BiblioVsOthersSection() {
                                         {card.paragraphs.map((paragraph, index) => (
                                             <p
                                                 key={index}
-                                                className="text-[18px] leading-[1.34] text-zinc-400 md:text-[30px] md:leading-[1.45]"
+                                                className="text-[16px] leading-[1.34] text-zinc-400 md:text-[30px] md:leading-[1.45]"
                                             >
                                                 {paragraph}
                                             </p>
