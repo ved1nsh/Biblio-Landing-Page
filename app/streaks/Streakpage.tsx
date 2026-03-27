@@ -32,7 +32,7 @@ const highlightCards = [
         title: "Celebrate progress that compounds.",
         description:
             "Turn small reading sessions into long-term consistency with visual milestones that make each session feel meaningful.",
-        image: "/images/streaks/s3.png",
+        image: "/images/streaks/imagess3.png",
         imageWrapperClass:
             "pointer-events-none absolute bottom-0 left-1/2 h-[81%] w-[88%] -translate-x-1/2 md:h-[92%] md:w-[94%]",
         imageClass: "object-contain object-bottom",

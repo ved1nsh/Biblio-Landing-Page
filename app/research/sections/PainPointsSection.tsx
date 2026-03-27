@@ -79,14 +79,15 @@ export default function PainPointsSection() {
 
     return (
         <section
-            className="w-full bg-[#EDE8E0] py-20 md:py-28"
+            className="w-full bg-[#F2EFE7] pb-16 pt-4 md:pb-24 md:pt-8"
             style={{ fontFamily: "var(--font-neue-montreal)" }}
         >
             <div className="mx-auto flex w-full max-w-[1400px] flex-col px-6 md:px-10">
                 {/* Heading */}
                 <div className="mb-10 flex max-w-[920px] flex-col items-center self-center text-center md:mb-16">
                     <h2
-                        className="bg-gradient-to-r from-[#6F63FF] via-[#9B56D6] to-[#E654A4] bg-clip-text text-[40px] font-normal leading-[1.1] tracking-tight text-transparent md:text-6xl"
+                        className="bg-gradient-to-r from-[#000000] via-[#000000] to-[#000000] bg-clip-text pb-2 text-[44px] font-normal leading-[1.1] tracking-[-0.04em] text-transparent md:pb-4 md:text-[88px] md:leading-[1.05]"
+
                         style={{ fontFamily: "var(--font-stack-sans)" }}
                     >
                         User pain points

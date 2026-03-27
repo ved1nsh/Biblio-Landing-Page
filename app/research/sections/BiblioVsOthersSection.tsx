@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useRef, useState } from "react";
 
 const comparisonCards = [
@@ -14,6 +15,7 @@ const comparisonCards = [
             "Librera Reader is a flexible ebook reader supporting formats like EPUB, PDF, and MOBI. With 10M+ downloads on the Play Store, it is popular among readers who manage large personal ebook libraries. The app offers strong customisation options, but its interface can feel complex and overwhelming.",
             "It focuses mainly on reading files and lacks tools for habit building, quote journaling, reading insights, or contextual assistance while reading.",
         ],
+        link: "/research/biblio-vs-librera",
     },
     {
         id: 2,
@@ -25,6 +27,7 @@ const comparisonCards = [
             "Moon+ Reader is one of the most widely used ebook readers on Android, with 10M+ downloads. It provides extensive customization options for fonts, layouts, and themes, making it a powerful reading tool.",
             "However, the experience can feel cluttered and feature-heavy for new users. The app focuses primarily on reading files and does not provide structured reading habits, quote management, or contextual tools to help understand text while reading.",
         ],
+        link: "/research/biblio-vs-moonplus",
     },
     {
         id: 3,
@@ -36,6 +39,7 @@ const comparisonCards = [
             "ReadEra is a lightweight ebook reader with 40M+ downloads on the Play Store. It supports multiple formats and works fully offline, making it popular for simple document reading.",
             "While the interface is clean and easy to use, the app is designed mainly as a document reader rather than a reading companion. It lacks features like reading streaks, deep reading analytics, quote journaling, and tools that help readers understand complex passages.",
         ],
+        link: "/research/biblio-vs-readera",
     },
     {
         id: 4,
@@ -47,6 +51,7 @@ const comparisonCards = [
             "Bookly focuses on helping readers track their reading habits and has 1M+ downloads on the Play Store. The app offers reading timers, statistics, and motivational tracking features that encourage consistent reading.",
             "However, it does not support reading ebooks inside the app itself, requiring users to manually log their reading sessions. It also lacks tools for understanding text, saving meaningful quotes, or integrating the full reading experience into one platform.",
         ],
+        link: "/research/biblio-vs-bookly",
     },
     {
         id: 5,
@@ -58,6 +63,7 @@ const comparisonCards = [
             "StoryGraph is a book tracking platform with 1M+ downloads on the Play Store that helps readers organize their libraries and discover new books. It provides detailed reading statistics and personalized recommendations based on reading preferences.",
             "However, the platform focuses mainly on tracking books rather than the reading experience itself. It does not include an ebook reader, quote journaling tools, or contextual assistance to help readers understand difficult passages.",
         ],
+        link: "/research/biblio-vs-storygraph",
     },
 ];
 
@@ -91,18 +97,18 @@ export default function BiblioVsOthersSection() {
 
     return (
         <section
-            className="w-full bg-white px-6 py-20 md:px-10 md:py-28"
+            className="w-full bg-[#F2EFE7] px-6 pb-6 pt-10 md:px-10 md:pb-8 md:pt-16"
             style={{ fontFamily: "var(--font-neue-montreal)" }}
         >
             <div className="mx-auto flex w-full max-w-[1280px] flex-col items-center">
                 <div className="max-w-[860px] text-center">
                     <h2
-                        className="bg-gradient-to-r from-[#6F63FF] via-[#9B56D6] to-[#E654A4] bg-clip-text text-[44px] font-normal leading-[0.98] tracking-tight text-transparent md:text-[84px]"
+                        className="bg-gradient-to-r from-[#000000] via-[#000000] to-[#000000] bg-clip-text text-[44px] font-normal leading-[0.98] tracking-tight text-transparent md:text-[84px]"
                         style={{ fontFamily: "var(--font-stack-sans)" }}
                     >
                         Biblio vs Others
                     </h2>
-                    <p className="mx-auto mt-5 max-w-[760px] text-[18px] leading-[1.28] text-zinc-800 md:mt-6 md:text-[28px]">
+                    <p className="mx-auto mt-5 max-w-[1280px] text-[18px] leading-[1.28] text-zinc-800 md:mt-6 md:text-[28px]">
                         This section explores the digital reading ecosystem, analyzing popular reading tools and identifying key user pain points. The insights gathered here helped shape the features and design decisions behind Biblio.
                     </p>
                 </div>
@@ -111,7 +117,7 @@ export default function BiblioVsOthersSection() {
                     <div
                         ref={trackRef}
                         onScroll={handleTrackScroll}
-                        className="flex gap-4 snap-x snap-mandatory scroll-smooth overflow-x-auto pb-3 [scrollbar-width:none] md:gap-6 [&::-webkit-scrollbar]:hidden"
+                        className="flex w-full gap-5 snap-x snap-mandatory scroll-smooth overflow-x-auto pb-8 [scrollbar-width:none] md:gap-8 [&::-webkit-scrollbar]:hidden"
                     >
                         {comparisonCards.map((card) => (
                             <article
@@ -153,6 +159,23 @@ export default function BiblioVsOthersSection() {
                                                 {paragraph}
                                             </p>
                                         ))}
+
+                                        {/* <div className="mt-2 md:mt-4">
+                                            <Link
+                                                href={card.link}
+                                                className="inline-flex items-center gap-2 text-[16px] font-medium text-[#95A3FF] transition-colors hover:text-white md:text-[20px]"
+                                            >
+                                                Read Full Comparison
+                                                <svg
+                                                    className="h-5 w-5 md:h-6 md:w-6"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                                </svg>
+                                            </Link>
+                                        </div> */}
                                     </div>
                                 </div>
                             </article>
