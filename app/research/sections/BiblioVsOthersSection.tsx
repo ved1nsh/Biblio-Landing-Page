@@ -193,6 +193,22 @@ export default function BiblioVsOthersSection() {
                             />
                         ))}
                     </div>
+
+                    <div className="mt-12 flex justify-center pb-8 md:mt-16">
+                        <Link
+                            href="/research/detailed-comparison"
+                            className="inline-flex items-center gap-3 rounded-full bg-black px-8 py-3.5 text-[15px] font-medium text-white transition-all hover:scale-105 hover:bg-zinc-800 md:px-10 md:py-4 md:text-[17px]"
+                        >
+                            Detailed Comparison
+                            <Image
+                                src="/images/page2/arrow.png"
+                                alt="Arrow"
+                                width={20}
+                                height={20}
+                                className="h-5 w-5 object-contain md:h-6 md:w-6"
+                            />
+                        </Link>
+                    </div>
                 </div>
             </div>
         </section>
