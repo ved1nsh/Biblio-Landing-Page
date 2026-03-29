@@ -1,6 +1,6 @@
 export default function ProblemObjectiveSection() {
     return (
-        <section className="w-full bg-[#F2EFE7] px-6 py-16 text-black md:px-10 md:py-24">
+        <section className="w-full bg-[#F2EFE7] px-6 py-8 text-black md:px-10 md:py-24">
             <div className="mx-auto w-full max-w-[1360px]">
                 <h2
                     className="text-[36px] font-normal leading-[0.95] tracking-[-0.04em] text-black md:text-[88px]"
@@ -9,9 +9,9 @@ export default function ProblemObjectiveSection() {
                     Problem & Objective
                 </h2>
 
-                <div className="-mx-6 mt-10 overflow-x-auto px-6 pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:mt-12 md:overflow-visible md:px-0 md:pb-0">
-                    <div className="flex snap-x snap-mandatory gap-5 md:grid md:grid-cols-2 md:gap-8">
-                        <article className="min-h-[420px] w-[calc(100vw-72px)] shrink-0 snap-center rounded-[36px] bg-white px-7 py-8 md:min-h-[540px] md:w-auto md:px-12 md:py-14">
+                <div className="mt-10 w-full overflow-hidden md:mt-12">
+                    <div className="flex gap-4 snap-x snap-mandatory scroll-smooth overflow-x-auto pb-3 [scrollbar-width:none] md:grid md:grid-cols-2 md:gap-8 [&::-webkit-scrollbar]:hidden">
+                        <article className="min-h-[420px] w-[92%] shrink-0 snap-start rounded-[36px] bg-white px-7 py-8 md:min-h-[540px] md:w-auto md:px-12 md:py-14">
                             <h3
                                 className="text-[24px] font-normal leading-[1.05] tracking-tight text-black md:text-[42px]"
                                 style={{ fontFamily: "var(--font-stack-sans)" }}
@@ -35,7 +35,7 @@ export default function ProblemObjectiveSection() {
                             </div>
                         </article>
 
-                        <article className="min-h-[420px] w-[calc(100vw-72px)] shrink-0 snap-center rounded-[36px] bg-white px-7 py-8 md:min-h-[540px] md:w-auto md:px-12 md:py-14">
+                        <article className="min-h-[420px] w-[92%] shrink-0 snap-start rounded-[36px] bg-white px-7 py-8 md:min-h-[540px] md:w-auto md:px-12 md:py-14">
                             <h3
                                 className="text-[24px] font-normal leading-[1.05] tracking-tight text-black md:text-[42px]"
                                 style={{ fontFamily: "var(--font-stack-sans)" }}

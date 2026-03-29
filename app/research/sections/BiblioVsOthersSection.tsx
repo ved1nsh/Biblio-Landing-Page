@@ -97,7 +97,7 @@ export default function BiblioVsOthersSection() {
 
     return (
         <section
-            className="w-full bg-[#F2EFE7] px-6 py-16 md:px-10 md:py-24"
+            className="w-full bg-[#F2EFE7] px-6 py-8 md:px-10 md:py-24"
             style={{ fontFamily: "var(--font-neue-montreal)" }}
         >
             <div className="mx-auto flex w-full max-w-[1280px] flex-col items-center">

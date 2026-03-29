@@ -3,70 +3,59 @@ import Image from "next/image";
 export default function MeetTheDevSection() {
     return (
         <section
-            className="w-full bg-[#EDEAE4] px-6 py-18 md:px-10 md:py-24"
+            className="w-full bg-[#EDEAE4] px-6 py-16 md:px-10 md:py-24"
             style={{ fontFamily: "var(--font-neue-montreal)" }}
         >
-            <div className="mx-auto flex w-full max-w-300 flex-col items-center">
-
-                {/* Heading - Center Aligned */}
+            <div className="mx-auto w-full max-w-[1320px]">
                 <h2
-                    className="text-center text-[40px] font-normal leading-[1.05] tracking-tight text-zinc-900 md:text-[56px] lg:text-[64px]"
+                    className="mx-auto max-w-[720px] text-center text-[36px] font-normal leading-[1.02] tracking-tight text-zinc-900 md:text-[56px] lg:text-[64px]"
                     style={{ fontFamily: "var(--font-stack-sans)" }}
                 >
                     The Story Behind Biblio
                 </h2>
 
-                {/* Side-by-side content container */}
-                <div className="mt-14 flex w-full flex-col md:mt-16 md:flex-row md:items-center md:gap-14 lg:gap-24">
-
-                    {/* Text Content Area */}
-                    <div className="order-2 flex w-full flex-col md:order-2 md:w-[54%]">
-                        {/* Name + intro line */}
-                        <p className="mt-8 text-[22px] font-semibold leading-[1.3] text-zinc-900 md:mt-0 md:text-[28px] lg:text-[32px]">
+                <div className="mt-10 flex w-full flex-col gap-8 md:mt-16 lg:mt-24 md:grid md:grid-cols-[minmax(0,1.2fr)_minmax(360px,0.9fr)] md:grid-rows-[auto_1fr] md:items-stretch md:gap-x-12 md:gap-y-0 lg:gap-x-16">
+                    {/* Intro */}
+                    <div className="order-1 md:col-start-1 md:row-start-1">
+                        <p className="text-[22px] font-semibold leading-[1.25] text-zinc-900 md:text-[28px] lg:text-[32px]">
                             Hi, I am Vedansh Sharma,<br />and this is my story.
                         </p>
+                    </div>
 
-                        {/* Body copy — paragraph 1 */}
-                        <p className="mt-6 text-[17px] leading-[1.65] text-zinc-500 md:text-[20px] lg:text-[22px]">
+                    {/* Image */}
+                    <div className="order-2 w-full md:col-start-2 md:row-span-2 md:row-start-1 md:h-full">
+                        <div className="relative mx-auto h-[460px] w-full max-w-[520px] overflow-hidden rounded-[32px] bg-[#EDEAE4] md:mx-0 md:h-full md:min-h-[560px] md:max-w-none">
+                            <Image
+                                src="/images/ved.png"
+                                alt="Vedansh Sharma"
+                                fill
+                                className="object-contain object-bottom"
+                                priority
+                            />
+                        </div>
+                    </div>
+
+                    {/* Paragraphs */}
+                    <div className="order-3 flex h-full flex-col justify-end gap-5 md:col-start-1 md:row-start-2 md:mt-0 md:gap-6">
+                        <p className="text-[17px] leading-[1.65] text-zinc-600 md:text-[19px] lg:text-[21px]">
                             A friend recommended me a book that I should read, so I grabbed the PDF of the book and was ready to dive in. But then I hit a wall: I realised I had nowhere to actually put it, and even worse, nowhere to actually read it comfortably.{" "}
                             <span className="font-semibold text-zinc-900">
                                 The existing apps for reading book pdfs were either too cluttered, with laggy and outdated UIs
                             </span>{" "}
-                            that just killed the vibe of the book, just didn't feel like a place I wanted to spend time in.
+                            that just killed the vibe of the book, just didn&apos;t feel like a place I wanted to spend time in.
                         </p>
 
-                        {/* Body copy — paragraph 2 */}
-                        <p className="mt-6 text-[17px] leading-[1.65] text-zinc-500 md:text-[20px] lg:text-[22px]">
-                            As someone who loves building products that people would "actually" use, I decided to make an app that assists users to read their books with no disturbance with a clean, simple and modern UI, with features that helps user to stay consistent with their reading, and AI to help them read better.
+                        <p className="text-[17px] leading-[1.65] text-zinc-600 md:text-[19px] lg:text-[21px]">
+                            As someone who loves building products that people would &quot;actually&quot; use, I decided to make an app that assists users to read their books with no disturbance with a clean, simple and modern UI, with features that helps user to stay consistent with their reading, and AI to help them read better.
                         </p>
 
-                        {/* Body copy — paragraph 3 */}
-                        <p className="mt-6 text-[17px] leading-[1.65] text-zinc-500 md:text-[20px] lg:text-[22px]">
+                        <p className="text-[17px] leading-[1.65] text-zinc-600 md:text-[19px] lg:text-[21px]">
                             And thats how Biblio Started. What began as a simple app where users can read their books to countless important features that are actually needed. And now we are here, with{" "}
                             <span className="font-semibold text-zinc-900">All this, and much more.</span>
                         </p>
                     </div>
-
-                    {/* Image Area - Back to original default container */}
-                    <div className="order-1 w-full md:order-1 md:w-[46%]">
-                        <div className="w-full bg-[#EDEAE4]">
-                            <div className="relative h-105 w-full md:h-135 lg:h-155">
-                                <Image
-                                    src="/images/ved.png"
-                                    alt="Vedansh Sharma"
-                                    fill
-                                    className="object-contain object-bottom"
-                                    priority
-                                />
-                            </div>
-                        </div>
-                       
-                    </div>
-
                 </div>
             </div>
-
         </section>
-
     );
 }

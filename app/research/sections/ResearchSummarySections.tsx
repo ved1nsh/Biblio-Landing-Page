@@ -3,7 +3,7 @@ export default function ResearchSummarySections() {
     return (
         <>
             <section
-                className="w-full bg-[#F2EFE7] px-6 py-16 text-black md:px-10 md:py-24"
+                className="w-full bg-[#F2EFE7] px-6 py-8 text-black md:px-10 md:py-24"
                 style={{ fontFamily: "var(--font-neue-montreal)" }}
             >
                 <div className="mx-auto w-full max-w-[1360px]">

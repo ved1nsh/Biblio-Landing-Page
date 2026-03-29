@@ -1,6 +1,6 @@
 export default function ResearchIntroSection() {
     return (
-        <section className="w-full bg-[#F2EFE7] px-6 py-16 text-black md:px-10 md:py-24">
+        <section className="w-full bg-[#F2EFE7] px-6 py-8 text-black md:px-10 md:py-24">
             <div className="mx-auto w-full max-w-[1360px]">
                 <div className="rounded-[32px] bg-[#F2EFE7]">
                     <h2

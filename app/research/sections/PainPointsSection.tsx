@@ -79,7 +79,7 @@ export default function PainPointsSection() {
 
     return (
         <section
-            className="w-full bg-[#F2EFE7] py-20 md:py-28"
+            className="w-full bg-[#F2EFE7] py-8 md:py-28"
             style={{ fontFamily: "var(--font-neue-montreal)" }}
         >
             <div className="mx-auto flex w-full max-w-[1400px] flex-col px-6 md:px-10">

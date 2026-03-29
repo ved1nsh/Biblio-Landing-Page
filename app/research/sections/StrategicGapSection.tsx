@@ -1,6 +1,6 @@
 export default function StrategicGapSection() {
     return (
-        <section className="w-full bg-black px-6 py-16 text-white md:px-10 md:py-24">
+        <section className="w-full bg-black px-6 py-8 text-white md:px-10 md:py-24">
             <div className="mx-auto w-full max-w-[1360px]">
                 <h2
                     className="max-w-[880px] text-[36px] font-normal leading-[0.96] tracking-[-0.04em] text-white md:text-[88px]"

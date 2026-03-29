@@ -1,6 +1,6 @@
 export default function MarketOverviewSection() {
     return (
-        <section className="w-full bg-[#F2EFE7] px-6 py-16 text-black md:px-10 md:py-24">
+        <section className="w-full bg-[#F2EFE7] px-6 py-8 text-black md:px-10 md:py-24">
             <div className="mx-auto w-full max-w-[1360px]">
                 <h2
                     className="max-w-[920px] text-[36px] font-normal leading-[0.95] tracking-[-0.04em] text-black md:text-[88px]"

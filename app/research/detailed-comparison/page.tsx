@@ -9,7 +9,7 @@ export default function DetailedComparisonPage() {
             style={{ fontFamily: "var(--font-neue-montreal)" }}
         >
             {/* Header / Intro */}
-            <section className="w-full px-6 py-16 md:px-10 md:py-24">
+            <section className="w-full px-6 pb-8 pt-28 md:px-10 md:py-24">
                 <div className="mx-auto flex w-full max-w-[1240px] flex-col items-center text-center">
                     <div className="mb-8 flex w-full justify-center md:mb-12">
                         <Link
@@ -35,7 +35,7 @@ export default function DetailedComparisonPage() {
             </section>
 
             {/* Biblio vs Moon+ Reader */}
-            <section className="w-full bg-white px-6 py-16 md:px-10 md:py-24">
+            <section className="w-full bg-white px-6 py-8 md:px-10 md:py-24">
                 <div className="mx-auto w-full max-w-[1360px]">
                     <div className="mb-12 flex flex-col items-center text-center md:mb-16">
                         <h2
@@ -51,10 +51,10 @@ export default function DetailedComparisonPage() {
                     </div>
 
                     <h3 className="mb-8 text-center text-[24px] font-medium text-black md:text-[32px]" style={{ fontFamily: "var(--font-stack-sans)" }}>Home Screen UI</h3>
-                    <div className="-mx-6 overflow-x-auto px-6 pb-8 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:overflow-visible md:px-0 md:pb-0">
-                        <div className="flex snap-x snap-mandatory gap-6 md:grid md:grid-cols-2 md:gap-12">
+                    <div className="w-full overflow-hidden">
+                        <div className="flex gap-4 snap-x snap-mandatory scroll-smooth overflow-x-auto pb-3 [scrollbar-width:none] md:grid md:grid-cols-2 md:gap-12 [&::-webkit-scrollbar]:hidden">
                             {/* Biblio Screenshot */}
-                            <div className="flex w-[85vw] shrink-0 snap-center flex-col items-center rounded-3xl bg-[#F2EFE7] p-6 md:w-auto md:p-10">
+                            <div className="flex w-[92%] shrink-0 snap-start flex-col items-center rounded-3xl bg-[#F2EFE7] p-6 md:w-auto md:snap-start md:p-10">
                                 <span className="mb-6 rounded-full bg-black px-4 py-1.5 text-sm font-medium text-white">Biblio UI</span>
                                 <div className="relative aspect-[9/19] w-full max-w-[320px]">
                                     <Image
@@ -67,7 +67,7 @@ export default function DetailedComparisonPage() {
                             </div>
 
                             {/* Moon+ Screenshot */}
-                            <div className="flex w-[85vw] shrink-0 snap-center flex-col items-center rounded-3xl bg-[#F2EFE7] p-6 md:w-auto md:p-10">
+                            <div className="flex w-[92%] shrink-0 snap-start flex-col items-center rounded-3xl bg-[#F2EFE7] p-6 md:w-auto md:snap-start md:p-10">
                                 <span className="mb-6 rounded-full bg-zinc-400 px-4 py-1.5 text-sm font-medium text-white">Moon+ Reader UI</span>
                                 <div className="relative aspect-[9/19] w-full max-w-[320px] flex items-center justify-center">
                                      <Image
@@ -82,10 +82,10 @@ export default function DetailedComparisonPage() {
                     </div>
 
                     <h3 className="mt-16 mb-8 text-center text-[24px] font-medium text-black md:mt-24 md:text-[32px]" style={{ fontFamily: "var(--font-stack-sans)" }}>Reading Screen UI Comparison</h3>
-                    <div className="-mx-6 overflow-x-auto px-6 pb-8 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:overflow-visible md:px-0 md:pb-0">
-                        <div className="flex snap-x snap-mandatory gap-6 md:grid md:grid-cols-2 md:gap-12">
+                    <div className="w-full overflow-hidden">
+                        <div className="flex gap-4 snap-x snap-mandatory scroll-smooth overflow-x-auto pb-3 [scrollbar-width:none] md:grid md:grid-cols-2 md:gap-12 [&::-webkit-scrollbar]:hidden">
                             {/* Biblio Reading Screenshot */}
-                            <div className="flex w-[85vw] shrink-0 snap-center flex-col items-center rounded-3xl bg-[#F2EFE7] p-6 md:w-auto md:p-10">
+                            <div className="flex w-[92%] shrink-0 snap-start flex-col items-center rounded-3xl bg-[#F2EFE7] p-6 md:w-auto md:snap-start md:p-10">
                                 <span className="mb-6 rounded-full bg-black px-4 py-1.5 text-sm font-medium text-white">Biblio Reading UI</span>
                                 <div className="relative aspect-[9/19] w-full max-w-[320px] flex items-center justify-center">
                                     <Image
@@ -98,7 +98,7 @@ export default function DetailedComparisonPage() {
                             </div>
 
                             {/* Moon+ Reading Screenshot */}
-                            <div className="flex w-[85vw] shrink-0 snap-center flex-col items-center rounded-3xl bg-[#F2EFE7] p-6 md:w-auto md:p-10">
+                            <div className="flex w-[92%] shrink-0 snap-start flex-col items-center rounded-3xl bg-[#F2EFE7] p-6 md:w-auto md:snap-start md:p-10">
                                 <span className="mb-6 rounded-full bg-zinc-400 px-4 py-1.5 text-sm font-medium text-white">Moon+ Reading UI</span>
                                 <div className="relative aspect-[9/19] w-full max-w-[320px] flex items-center justify-center">
                                      <Image
@@ -157,7 +157,7 @@ export default function DetailedComparisonPage() {
             </section>
 
             {/* Biblio vs ReadEra */}
-            <section className="w-full bg-[#F2EFE7] px-6 py-16 md:px-10 md:py-24">
+            <section className="w-full bg-[#F2EFE7] px-6 py-8 md:px-10 md:py-24">
                 <div className="mx-auto w-full max-w-[1360px]">
                     <div className="mb-12 flex flex-col items-center text-center md:mb-16">
                         <h2
@@ -173,10 +173,10 @@ export default function DetailedComparisonPage() {
                     </div>
 
                     <h3 className="mb-8 text-center text-[24px] font-medium text-black md:text-[32px]" style={{ fontFamily: "var(--font-stack-sans)" }}>Home Screen UI</h3>
-                    <div className="-mx-6 overflow-x-auto px-6 pb-8 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:overflow-visible md:px-0 md:pb-0">
-                        <div className="flex snap-x snap-mandatory gap-6 md:grid md:grid-cols-2 md:gap-12">
+                    <div className="w-full overflow-hidden">
+                        <div className="flex gap-4 snap-x snap-mandatory scroll-smooth overflow-x-auto pb-3 [scrollbar-width:none] md:grid md:grid-cols-2 md:gap-12 [&::-webkit-scrollbar]:hidden">
                             {/* Biblio Screenshot */}
-                            <div className="flex w-[85vw] shrink-0 snap-center flex-col items-center rounded-3xl bg-white p-6 shadow-sm md:w-auto md:p-10">
+                            <div className="flex w-[92%] shrink-0 snap-start flex-col items-center rounded-3xl bg-white p-6 shadow-sm md:w-auto md:snap-start md:p-10">
                                 <span className="mb-6 rounded-full bg-black px-4 py-1.5 text-sm font-medium text-white">Biblio UI</span>
                                 <div className="relative aspect-[9/19] w-full max-w-[320px]">
                                     <Image
@@ -189,7 +189,7 @@ export default function DetailedComparisonPage() {
                             </div>
 
                             {/* ReadEra Screenshot */}
-                            <div className="flex w-[85vw] shrink-0 snap-center flex-col items-center rounded-3xl bg-white p-6 shadow-sm md:w-auto md:p-10">
+                            <div className="flex w-[92%] shrink-0 snap-start flex-col items-center rounded-3xl bg-white p-6 shadow-sm md:w-auto md:snap-start md:p-10">
                                 <span className="mb-6 rounded-full bg-zinc-400 px-4 py-1.5 text-sm font-medium text-white">ReadEra UI</span>
                                 <div className="relative aspect-[9/19] w-full max-w-[320px] flex items-center justify-center">
                                     <Image
@@ -204,10 +204,10 @@ export default function DetailedComparisonPage() {
                     </div>
 
                     <h3 className="mt-16 mb-8 text-center text-[24px] font-medium text-black md:mt-24 md:text-[32px]" style={{ fontFamily: "var(--font-stack-sans)" }}>Reading Screen UI Comparison</h3>
-                    <div className="-mx-6 overflow-x-auto px-6 pb-8 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:overflow-visible md:px-0 md:pb-0">
-                        <div className="flex snap-x snap-mandatory gap-6 md:grid md:grid-cols-2 md:gap-12">
+                    <div className="w-full overflow-hidden">
+                        <div className="flex gap-4 snap-x snap-mandatory scroll-smooth overflow-x-auto pb-3 [scrollbar-width:none] md:grid md:grid-cols-2 md:gap-12 [&::-webkit-scrollbar]:hidden">
                             {/* Biblio Reading Screenshot */}
-                            <div className="flex w-[85vw] shrink-0 snap-center flex-col items-center rounded-3xl bg-white p-6 shadow-sm md:w-auto md:p-10">
+                            <div className="flex w-[92%] shrink-0 snap-start flex-col items-center rounded-3xl bg-white p-6 shadow-sm md:w-auto md:snap-start md:p-10">
                                 <span className="mb-6 rounded-full bg-black px-4 py-1.5 text-sm font-medium text-white">Biblio Reading UI</span>
                                 <div className="relative aspect-[9/19] w-full max-w-[320px] flex items-center justify-center">
                                     <Image
@@ -220,7 +220,7 @@ export default function DetailedComparisonPage() {
                             </div>
 
                             {/* ReadEra Reading Screenshot */}
-                            <div className="flex w-[85vw] shrink-0 snap-center flex-col items-center rounded-3xl bg-white p-6 shadow-sm md:w-auto md:p-10">
+                            <div className="flex w-[92%] shrink-0 snap-start flex-col items-center rounded-3xl bg-white p-6 shadow-sm md:w-auto md:snap-start md:p-10">
                                 <span className="mb-6 rounded-full bg-zinc-400 px-4 py-1.5 text-sm font-medium text-white">ReadEra Reading UI</span>
                                 <div className="relative aspect-[9/19] w-full max-w-[320px] flex items-center justify-center">
                                     <Image

@@ -5,7 +5,7 @@ export default function ResearchHeroSection() {
         <section className="relative w-full overflow-hidden">
             <div className="absolute inset-0 bg-[linear-gradient(180deg,_#081225_0%,_#080E1F_34%,_#05070F_68%,_#010101_100%)]" />
 
-            <div className="relative w-full px-6 py-20 md:px-10 md:py-32">
+            <div className="relative w-full px-6 py-10 md:px-10 md:py-32">
                 <div className="mx-auto flex w-full max-w-[1240px] flex-col items-center text-center">
                     <Link
                         href="/"

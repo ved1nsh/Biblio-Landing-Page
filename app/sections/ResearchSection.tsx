@@ -11,9 +11,9 @@ export default function ResearchPage() {
 
             <div className="mx-auto mt-4 w-full max-w-[1240px] rounded-[28px] bg-black text-white md:mt-6">
                 <div className="mx-auto flex flex-col items-center text-center md:grid md:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] md:items-center md:gap-10 md:text-left lg:gap-14">
-                    <div className="mx-auto flex max-w-[820px] flex-col items-center text-center md:mx-0 md:max-w-[520px] md:items-start md:text-left">
+                    <div className="mx-auto flex max-w-[820px] flex-col items-center text-center md:mx-0 md:max-w-[620px] md:items-start md:text-left">
                         <h2
-                            className="max-w-[520px] bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-[40px] font-normal leading-[1.12] tracking-slug text-transparent md:text-[54px]"
+                            className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-[40px] font-normal leading-[1.12] tracking-slug text-transparent md:text-[64px]"
                             style={{ fontFamily: "var(--font-stack-sans)" }}
                         >
                             A Solution Born
@@ -23,11 +23,11 @@ export default function ResearchPage() {
                             Real Friction.
                         </h2>
 
-                        <p className="mt-10 max-w-[680px] text-[16px] leading-[1.35] text-zinc-400 md:mt-10 md:text-[20px]">
+                        <p className="mt-10 max-w-[680px] text-[16px] leading-[1.35] text-zinc-400 md:mt-10 md:text-[22px]">
                             We analysed the current landscape and found a market flooded with fragmented solutions.
                         </p>
 
-                        <p className="mt-8 max-w-[760px] text-[16px] leading-[1.38] text-zinc-500 md:mt-8 md:text-[20px]">
+                        <p className="mt-8 max-w-[760px] text-[16px] leading-[1.38] text-zinc-500 md:mt-8 md:text-[22px]">
                             Mobile readers burdened by <span className="text-zinc-200">laggy interfaces and poor UI</span>, the reading experience has felt stagnant. Users are often forced to choose between a digital library that feels like a soulless file explorer or a physical shelf that stays completely offline. <span className="text-zinc-200">
                                 <br></br>
                                 <br></br>
