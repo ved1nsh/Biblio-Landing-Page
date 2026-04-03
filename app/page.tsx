@@ -39,7 +39,7 @@ export default function Home() {
               <div className="mt-6 flex flex-row items-center justify-center md:mt-8 md:justify-start">
                 <button
                   onClick={() => setIsDownloadModalOpen(true)}
-                  className="rounded-full bg-black px-7 py-2.5 text-[12px] font-light text-white transition-opacity hover:opacity-85 md:px-9 md:py-3.5 md:text-[16px]"
+                  className="rounded-full bg-black px-7 py-2.5 text-[12px] font-regular text-white transition-opacity hover:opacity-85 md:px-9 md:py-3.5 md:text-[16px]"
                 >
                   Download now
                 </button>

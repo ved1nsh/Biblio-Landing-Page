@@ -65,7 +65,7 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
 
                 <div className="mt-6 space-y-3">
                     <a
-                        href="https://drive.google.com/file/d/17V2jWIGM4mwZ7Zbm9CHmTJnYO-2Ak1sz/view?usp=drivesdk" // TODO: Paste your Android download link here
+                        href="https://drive.google.com/file/d/1GzNW6FXqJhUL-agJ2bD7SGzojmwiM6Ot/view?usp=drivesdk" // TODO: Paste your Android download link here
                         target="_blank"
                         rel="noreferrer"
                         className="flex items-center justify-between rounded-2xl border border-white/20 bg-white/5 px-4 py-3 transition-colors hover:bg-white/10"
