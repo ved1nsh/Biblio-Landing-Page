@@ -2,9 +2,19 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { createPortal } from "react-dom";
 import DownloadModal from "./DownloadModal";
 
-export default function Footer() {
+type FooterProps = {
+    // The big line and the line under it. Every page uses the defaults except the homepage,
+    // where the footer doubles as the page's closing ("Thanks for reading.").
+    title?: string;
+    subtitle?: string;
+    // Adds a "Back to top" link under the footer links (the homepage is one long scroll).
+    showBackToTop?: boolean;
+};
+
+export default function Footer({ title = "Biblio", subtitle = "All this and much more", showBackToTop = false }: FooterProps) {
     const [isContactOpen, setIsContactOpen] = useState(false);
     const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
 
@@ -39,13 +49,13 @@ export default function Footer() {
                         className="text-[32px] font-normal leading-[1.08] tracking-tight text-zinc-900 md:text-[56px]"
                         style={{ fontFamily: "var(--font-stack-sans)" }}
                     >
-                        Biblio
+                        {title}
                     </p>
                     <p
                         className="mt-2 text-[24px] font-light leading-[1.08] tracking-tight text-zinc-900 md:mt-3 md:text-[30px]"
                         style={{ fontFamily: "var(--font-stack-sans)" }}
                     >
-                        All this and much more
+                        {subtitle}
                     </p>
                     <button
                         onClick={() => setIsDownloadModalOpen(true)}
@@ -76,6 +86,12 @@ export default function Footer() {
                         </Link>
                     </div>
 
+                    {showBackToTop ? (
+                        <a href="#top" className="mt-6 text-[14px] text-zinc-500 transition-colors hover:text-zinc-800">
+                            Back to top ↑
+                        </a>
+                    ) : null}
+
                     <p className="mt-8 max-w-205 text-center text-[11px] leading-normal text-zinc-500 md:mt-10 md:text-xs">
                         Note: The market analysis and competitive research presented on this site were conducted for educational and
                         portfolio purposes to demonstrate product strategy and user experience design principles. All brand names and
@@ -84,7 +100,7 @@ export default function Footer() {
                 </div>
             </section>
 
-            {isContactOpen ? (
+            {isContactOpen ? createPortal(
                 <div
                     className="fixed inset-0 z-50 flex items-center justify-center bg-black/45 px-5 backdrop-blur-[2px]"
                     onClick={() => setIsContactOpen(false)}
@@ -140,7 +156,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-            ) : null}
+            , document.body) : null}
 
             <DownloadModal
                 isOpen={isDownloadModalOpen}

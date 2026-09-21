@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 
 interface DownloadModalProps {
     isOpen: boolean;
@@ -30,7 +31,9 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
 
     if (!isOpen) return null;
 
-    return (
+    // Rendered straight into <body> (a "portal"). If it stayed where the button is, a parent with a CSS
+    // transform (like ScrollReveal's slide-in) would trap the full-screen overlay inside that parent's box.
+    return createPortal(
         <div
             className="fixed inset-0 z-[100] flex items-center justify-center bg-black/45 px-5 backdrop-blur-[2px]"
             onClick={onClose}
@@ -75,6 +78,7 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
                     </a>
                 </div>
             </div>
-        </div>
+        </div>,
+        document.body
     );
 }

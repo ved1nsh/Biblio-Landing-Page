@@ -5,7 +5,7 @@ import Footer from "../../components/Footer";
 export default function DetailedComparisonPage() {
     return (
         <main
-            className="flex min-h-screen w-full flex-col bg-[#F2EFE7] text-black"
+            className="site-scale flex min-h-screen w-full flex-col bg-[#F2EFE7] text-black"
             style={{ fontFamily: "var(--font-neue-montreal)" }}
         >
             {/* Header / Intro */}

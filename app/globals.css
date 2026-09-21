@@ -17,3 +17,34 @@ body {
   color: var(--foreground);
   font-family: var(--font-neue-montreal), Arial, Helvetica, sans-serif;
 }
+
+/* Pages drawn at the original, larger scale are rendered at 75% from tablet
+   width up — the same as setting the browser zoom to 75%. Phones stay at 100%,
+   so text there does not become too small. Change 0.75 to resize everything at
+   once; remove the class from a page to leave it at full size (the /zamp page
+   has no class, because it is already drawn at this smaller scale). */
+@media (min-width: 768px) {
+  .site-scale {
+    zoom: 0.75;
+  }
+}
+
+/* Biblio AI page animation.
+   biblio-draw: a circle that draws itself around the diagram, holds, then fades and repeats.
+   Switched off for people who ask their device for reduced motion. */
+@keyframes biblio-draw {
+  0% { stroke-dashoffset: 1; opacity: 0; }
+  8% { opacity: 1; }
+  40% { stroke-dashoffset: 0; opacity: 1; }
+  85% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+.biblio-draw {
+  stroke-dasharray: 1;
+  animation: biblio-draw 4.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .biblio-draw { animation: none; stroke-dashoffset: 0; opacity: 1; }
+}

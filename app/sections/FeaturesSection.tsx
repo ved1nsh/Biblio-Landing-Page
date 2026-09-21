@@ -10,14 +10,14 @@ const cards = [
         title: "Your Ultimate Reading Headquarters",
         desc: "Whether it’s an ePub, a PDF, Biblio handles your formats with a beautiful, unified reading experience.",
         image: "/images/page2/page2one.png",
-        href: "/features",
+        href: "/features/reading",
     },
     {
         id: 2,
         title: "Read with an AI companion.",
         desc: "Don't just consume text—interact with it. Highlight to get instant context, definitions, or summaries powered by advanced AI.",
         image: "/images/page2/page2two.png",
-        href: "/features#ai",
+        href: "/features/ai",
     },
     {
         id: 3,
